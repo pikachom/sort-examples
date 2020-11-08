@@ -12,7 +12,7 @@ public class BubbleSort {
      * n + (n-1) + (n-2) + ... + 1 = n(n-1)/2 ~> O(N^2)
      *
      * # Space
-     *  O(N)
+     *  O(1)
      *
      * */
     public static int[] bubbleSort(int[] arr){

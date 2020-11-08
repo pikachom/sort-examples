@@ -11,7 +11,7 @@ public class SelectionSort {
      * (n-1) + (n-2) + ... + 2 + 1 = n(n-1)/2 ~> O(N^2)
      *
      * #Space
-     * O(N)
+     * O(1)
      *
      * #비고
      * BubbleSort에 비해 스왑 횟수가 적고 비교 횟수가 많다

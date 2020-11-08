@@ -17,7 +17,7 @@ public class QuickSort {
      * 최선 : O(NlogN) -> 깊이가 logN, iteration이 N회이므로
      *
      * #Space
-     * O(N)
+     * O(1)
      *
      * #비고
      * 빠르다, 정렬된 배열에 한해 최악의 성능
