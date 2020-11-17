@@ -8,7 +8,7 @@ public class MergeSort {
      * #Time
      * 항상 O(NlogN)
      * #Space
-     * O(N)
+     * N(엑스트라스페이스) + logN(콜스택) = O(N)
      * */
 
     public static int[] mergeSort(int[] arr){

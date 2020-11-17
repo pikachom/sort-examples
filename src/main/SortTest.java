@@ -39,6 +39,9 @@ public class SortTest {
             case("MergeSort") :
                 result = MergeSort.mergeSort(testArr1);
                 break;
+            case("HeapSort") :
+                result = HeapSort.heapSort(testArr1);
+                break;
 
             default:
                 result = new int[0];
