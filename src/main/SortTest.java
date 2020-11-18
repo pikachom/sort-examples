@@ -42,6 +42,9 @@ public class SortTest {
             case("HeapSort") :
                 result = HeapSort.heapSort(testArr1);
                 break;
+            case("RadixSort") :
+                result = RadixSort.radixSort(testArr1);
+                break;
 
             default:
                 result = new int[0];
