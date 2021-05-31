@@ -1,5 +1,7 @@
 package algorithm_nolookcoding;
 
+import java.util.Arrays;
+
 public class InsertionSort {
 
     /**
@@ -21,6 +23,22 @@ public class InsertionSort {
 
 
     public static int[] insertionSort(int[] arr){
-
+        for(int i = 1; i < arr.length; i++){
+            int prev = i - 1;
+            int insertVal = arr[i];
+            while( prev >= 0 && insertVal < arr[prev]){
+                arr[prev + 1] = arr[prev];
+                prev--;
+            }
+            arr[prev + 1] = insertVal;
+        }
+        return arr;
+    }
+    public static void main(String[] args) {
+        int[] input = {4,2,3,1,5,9,8,7,6};
+        InsertionSort test = new InsertionSort();
+        System.out.println(Arrays.toString(input));
+        test.insertionSort(input);
+        System.out.println(Arrays.toString(input));
     }
 }

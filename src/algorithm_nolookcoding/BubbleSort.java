@@ -1,5 +1,7 @@
 package algorithm_nolookcoding;
 
+import java.util.Arrays;
+
 public class BubbleSort {
 
     /**
@@ -15,7 +17,27 @@ public class BubbleSort {
      *  O(1)
      *
      * */
-    public static int[] bubbleSort(int[] arr){
+    public int[] bubbleSort(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 1; j < arr.length - i; j++){
+                if(arr[j] < arr[j - 1]){
+                    swap(arr, j, j - 1);
+                }
+            }
+        }
+        return arr;
+    }
+    private void swap(int[] arr, int x, int y){
+        int tmp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = tmp;
+    }
 
+    public static void main(String[] args) {
+        int[] input = {1,2,3,4,5,9,8,7,6};
+        BubbleSort test = new BubbleSort();
+        System.out.println(Arrays.toString(input));
+        test.bubbleSort(input);
+        System.out.println(Arrays.toString(input));
     }
 }

@@ -1,5 +1,7 @@
 package algorithm_nolookcoding;
 
+import java.util.Arrays;
+
 public class SelectionSort {
     /**
      * #알고리즘
@@ -19,7 +21,29 @@ public class SelectionSort {
      * */
 
 
-    public static int[] selectionSort(int[] arr){
+    public int[] selectionSort(int[] arr){
+        for(int target = 0; target < arr.length - 1; target++){
+            int min = target;
+            for(int i = target + 1; i < arr.length; i++){
+                if(arr[i] < arr[min]){
+                    min = i;
+                }
+            }
+            swap(arr, target, min);
+        }
+        return arr;
+    }
+    private void swap(int[] arr, int x, int y){
+        int tmp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = tmp;
+    }
 
+    public static void main(String[] args) {
+        int[] input = {4,2,3,1,5,9,8,7,6};
+        SelectionSort test = new SelectionSort();
+        System.out.println(Arrays.toString(input));
+        test.selectionSort(input);
+        System.out.println(Arrays.toString(input));
     }
 }
